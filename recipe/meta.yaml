@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastcdc-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/fastcdc-{{ version }}.tar.gz
   sha256: 634b4fbea85296484e896b6ff70e43bcd94724989530c8639a6e5b253105eed2
 
 build:
   entry_points:
     - fastcdc = fastcdc.cli:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   build:
